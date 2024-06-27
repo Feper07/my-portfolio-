@@ -1,0 +1,816 @@
+
+
+:root{
+  --tomato-2: #FFF8F7;
+  --bronze-1: #FDFCFC;
+  --tomato-10: #DD4425;
+  --tomato-12: #5C271F;
+  --mauve-12: #211F26;
+  --mauve-8: #BCBAC7;
+  width: 100%;
+  height: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  :root{
+    --tomato-2: #1F1513;
+    --bronze-1: #141110;
+    --tomato-10: #EC6142;
+    --tomato-12: #FBD3CB;
+    --mauve-12: #EEEEF0;
+    --mauve-8: #625F69;
+  }
+} 
+
+.App{
+  width: 100%;
+}
+
+/*App*/
+.header-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+  font-size: 18px;
+  background-color: var(--tomato-2);
+  color: var(--mauve-12);
+}
+
+.item-container-1{
+  flex: 4;
+}
+
+.item-container{
+  flex: 1;
+}
+
+.link {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: inherit; /* Hereda el color del texto del padre */
+  cursor: pointer; /* Cambia el cursor al puntero cuando se pasa sobre el enlace */
+}
+
+.link:hover {
+  text-decoration: none;
+  color: var(--tomato-12);
+}
+
+.link[aria-current="page"] {
+  font-weight: bold; /* Por ejemplo, establecer el texto en negrita */
+}
+
+.link-name{
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: inherit; /* Hereda el color del texto del padre */
+  cursor: pointer; /* Cambia el cursor al puntero cuando se pasa sobre el enlace */
+}
+
+.diferente-color{
+  color: var(--tomato-12);
+}
+
+.link-name:hover {
+  text-decoration: none; 
+}
+
+.link-name.hide-on-menu {
+  display: none;
+}
+
+/*barra de navegacion responsive*/
+.menu-icon {
+  display: none; /* Oculto por defecto */
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0; /* Posiciona el modal en el lado derecho */
+  bottom: 0;
+  width: 300px; /* Ancho del modal */
+  backdrop-filter: blur(24px);/*Dprop. para difuminar*/
+  /* Agregar un efecto de sombra difuminada */
+
+  z-index: 1000; /* Asegura que el modal esté sobre otros elementos */
+  overflow-y: auto; /* Permite hacer scroll si el contenido es demasiado largo */
+  color: var(--mauve-12);
+}
+
+.modal {
+  padding-top: 36px;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.modal-close{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 250px;
+}
+
+.IoClose{
+  cursor: pointer;
+}
+
+.modal-container{
+  padding: 1rem 1.75rem;
+  margin: 0.4rem;
+}
+
+.modal-container:hover {
+  color: var(--tomato-12); 
+}
+
+.routes-container{
+  background-color: var(--bronze-1);
+  height: 240vh; /*Review*/
+}
+
+/*componente funcional Home*/
+.container-home{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 5rem;
+  background-color: var(--bronze-1);
+  /*height: 100vh;*/
+}
+
+.img-home{
+  padding-left: 6rem;
+}
+
+.text-home{
+  /*padding-right: 6rem;*/
+  width: 350px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Media queries para hacer el diseño responsive */
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+  
+  .item-container, .item-container-1 {
+    margin-bottom: 0.5rem; /* Añade margen entre los elementos del header */
+    display: none; /* Oculta los elementos de la barra de navegación */
+  }
+
+  .menu-icon {
+    display: block; /* Muestra el icono de menú */
+  }
+
+  .img-home, .text-home {
+    padding: 0.5rem;
+  }
+  
+}
+
+.img-home-container{
+  width: 320px;
+  height: auto;  
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.image-profile-home {
+  width: 90%;
+  height: 100%;
+  border-radius: 50px;
+  padding: 1.6rem;
+  animation: fadeIn 1s forwards, sweepIn 1s forwards; /*Animación de entrada (barrido)*/
+
+  background-color: var(--tomato-2);
+  border-radius: 12rem;
+  border: solid 1px var(--mauve-8);
+}
+
+/*Etapas de la animación (barrido)*/
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hi{
+  font-size: 16px;
+  color: var(--mauve-12);
+}
+
+.name{
+  font-size: 39px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--tomato-12);
+  padding-top: 0.5rem;
+}
+
+.container-animacion{
+  padding-top: 0.5rem;
+}
+
+.animacion-home{
+  animation: fadeIn 1s forwards, sweepIn 1s forwards; 
+}
+
+
+.buttons-home{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  margin-top: 4.5rem;
+}
+
+.btn{
+  padding: 1rem 1.75rem;
+  margin: 0.4rem;
+  border-radius: .5rem;
+  background-color: var(--bronze-1);
+  cursor: pointer;
+  border: none;
+  color: var(--tomato-12);
+  border: 1.5px solid var(--tomato-10); /* si uso transparent en (--tomato-10) El borde no será visible inicialmente */
+  transition: border-color 0.3s ease; /* Añade una transición suave al cambio de color del borde */
+}
+
+.btn:hover{
+  border-color:  var(--mauve-12);
+}
+
+.btn-diferente{
+  padding: 1rem 1.75rem;
+  margin: 0.4rem;
+  border-radius: .5rem;
+  background-color: var(--tomato-10);
+  cursor: pointer;
+  border: none;
+  color: var(--tomato-12);
+  border: 1.5px solid transparent; /* El borde no será visible inicialmente */
+  transition: border-color 0.3s ease; /* Añade una transición suave al cambio de color del borde */
+  font-weight: bold;
+}
+
+.btn-diferente:hover{
+  border-color:  var(--mauve-12);
+}
+
+
+.icon{
+  font-size: 32px;
+  cursor: pointer;
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: var(--tomato-12) ;
+}
+
+.icon:hover {
+  color: var(--mauve-12); 
+}
+
+.icon-link{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+}
+
+/*componente funcional AboutMe*/
+
+.container-aboutMe{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 4rem;
+  background-color: var(--bronze-1);
+  height: 200vh;
+  width: 60%;
+  margin: auto;
+}
+
+.introduccion-aboutMe{
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--mauve-12);
+}
+
+.title-aboutMe{
+  font-size: 26px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--tomato-12);
+  font-weight: bold;
+}
+
+.text-aboutme{
+  font-size: 17px;
+  color: var(--mauve-12);
+  max-width: 100%;
+  padding-top: 1rem;  
+  text-align: justify;
+  flex-wrap: wrap;
+}
+
+.color-diferente-aboutme{
+  color: var(--tomato-12);
+  font-size: 17px;
+}
+
+.button-aboutme{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+
+/*componente funcional Skills*/
+
+.container-all-skills{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 240vh;
+  min-width: 100%;
+}
+
+.title-skills-all{
+  color: var(--mauve-12);
+  font-size: 24px;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold
+}
+
+.container-skills{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 100vh;
+  padding-top: 1rem;
+}
+
+.img-skills-container-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--tomato-2);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem;
+  border: solid 1px var(--mauve-8);  
+}
+
+.img-primera-parte-skills{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 2.5rem;
+}
+
+/* Color Tooltip*/
+
+.button-tooltip{
+  border: none;
+  background-color: var(--tomato-2);
+}
+
+.tooltip-html{
+  color: var(--mauve-12);
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  fill: var(--mauve-12) ;
+  background-color: var(--bronze-1);
+}
+
+/*Contenedor img*/
+
+.img-1-skills{
+/*Texto sobre img. Primero en el div y tmbn en la img. "div, img, hover" */
+  position: relative;
+  display: inline-block;
+}
+
+/*img + hover (img-primera-parte-skills)*/
+
+.image-skills-a{
+  width: 100px;
+  height: auto;
+  /*Texto sobre img. Primero en el div y tmbn en la img*/
+  display: block;
+  transition: all 0.4s;
+}
+
+.image-skills-a:hover{
+  transform: rotate(5deg);
+}
+
+/*"after" text para cada img*/
+/*Texto sobre img. Primero en el div y tmbn en la img*/
+.image-skills-a::after {
+  content: "Nombre de la imagen"; /* Aquí pones el nombre que quieras mostrar */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(173, 23, 23);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.img-1-skills:hover .image-skills-a::after {
+  opacity: 1;
+}
+
+.image-skills-b{
+  width: 100px;
+  height: auto;
+  /*Texto sobre img. Primero en el div y tmbn en la img*/
+  display: block;
+  transition: all 0.4s;
+  padding-top: 0.3rem;
+}
+
+.image-skills-b:hover{
+  transform: rotate(5deg);
+}
+
+.image-skills-c{
+  width: 100px;
+  height: auto;
+  /*Texto sobre img. Primero en el div y tmbn en la img*/
+  display: block;
+  transition: all 0.4s;
+}
+
+.image-skills-c:hover{
+  transform: rotate(5deg);
+}
+
+.image-skills-d{
+  width: 90px;
+  height: auto;
+  /*Texto sobre img. Primero en el div y tmbn en la img*/
+  display: block;
+  transition: all 0.4s;
+  padding-top: 0.5rem;
+}
+
+.image-skills-d:hover{
+  transform: rotate(5deg);
+}
+
+
+
+.img-segunda-parte-skills{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+}
+
+.image-skills:hover{
+  transform: rotate(5deg);
+}
+
+/*img + hover (img-segunda-parte-skills)*/
+
+.image-skills-e{
+  width: 100px;
+  height: auto;
+  /*Texto sobre img. Primero en el div y tmbn en la img*/
+  display: block;
+  transition: all 0.4s;
+  padding-top: 1rem;
+}
+
+.image-skills-e:hover{
+  transform: rotate(5deg);
+}
+
+/*img TS*/
+.image-skills-f{
+  width: 90px;
+  height: auto;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  transition: all.4s;
+}
+
+.image-skills-f:hover{
+  transform: rotate(5deg);
+}
+
+.image-skills-g{
+  width: 100px;
+  margin-bottom: 10px;
+  transition: all.4s;
+}
+
+.image-skills-g:hover{
+  transform: rotate(5deg);
+}
+
+.image-skills-h{
+  width: 100px;
+  height: auto;
+  /*Texto sobre img. Primero en el div y tmbn en la img*/
+  display: block;
+  transition: all 0.4s;
+}
+
+.image-skills-h:hover{
+  transform: rotate(5deg);
+}
+
+.text-skills-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 16rem;
+  padding: 1rem;
+  text-align: justify;
+}
+
+.text-skills{
+  font-size: 17px;
+  color: var(--mauve-12);
+}
+
+.diferente-color-skills{
+  color: var(--tomato-12);
+}
+
+.button-skills{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+  width: 100%;
+}
+
+/*componente funcional Projects*/
+
+.projects-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /*flex-wrap: wrap;*/
+  padding-top: 2rem;
+  min-height: 240vh;
+  min-width: 100%;
+}
+
+.title-projects{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.first-title-projects{
+  color: var(--mauve-12);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-title-projects{
+  color: var(--mauve-12);
+  font-size: 24px;
+}
+
+.all-videos-projects{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.container-uno-projects{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  background-color:var(--tomato-2);   /*#5c837445; color más claro*/
+  border-radius: 10px;
+  margin: 1rem;
+  border: 1px solid transparent; /* El borde no será visible inicialmente */
+  transition: border-color 0.3s ease; /* Añade una transición suave al cambio de color del borde */
+  max-width: 350px;
+}
+
+.container-uno-projects:hover{
+  border-color:  var(--mauve-8);
+}
+
+.text-video-uno{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.title-text-project-one{
+  color: var(--mauve-12);
+  font-size: 11px;
+  padding: 0.5rem;
+}
+
+.strong-project-title{
+  font-size: 13px;
+  color: var(--tomato-12);
+}
+
+.text-first-project{
+  color: var(--mauve-12);
+  font-size: 13px;
+  padding: 0.5rem;
+  text-align: justify;
+}
+
+.color-diferent-text-project{
+  color: var(--tomato-12);
+  font-size: 13px;
+  padding: 0.5rem;
+  text-align: justify;
+}
+
+.video-uno-add{
+  padding: 1rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  animation: fadeIn 1s forwards, sweepIn 1s forwards; /*Animación de entrada (barrido)*/
+}
+
+.icon-project{
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: azure;
+}
+
+.icon-project:hover {
+  color: #93B1A6; 
+}
+
+.container-dos-projects{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  background-color:var(--tomato-2);
+  border-radius: 10px;
+  margin: 1rem;
+  border: 1px solid transparent; /* El borde no será visible inicialmente */
+  transition: border-color 0.3s ease; /* Añade una transición suave al cambio de color del borde */
+  max-width: 350px;
+}
+
+.container-dos-projects:hover{
+  border-color: var(--mauve-8);
+}
+
+.text-video-dos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.title-text-project-two{
+  color: var(--mauve-12);
+  font-size: 11px;
+  padding: 0.5rem;
+}
+
+.text-second-project{
+  color: var(--mauve-12);
+  font-size: 13px;
+  padding: 0.5rem;
+  text-align: justify;
+}
+
+.video-dos-add{
+  padding: 1rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  animation: fadeIn 1s forwards, sweepIn 1s forwards; /*Animación de entrada (barrido)*/
+}
+
+.gif-projects-uno{
+  width: 100%; /*350px*/
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  transition: all.4s;
+  opacity: 0.7;
+  border: solid 0.5px var(--mauve-8);
+}
+
+.gif-projects-uno:hover{
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.links-container-proyect{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.name-link-projects{
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: inherit; /* Hereda el color del texto del padre */
+  cursor: pointer; /* Cambia el cursor al puntero cuando se pasa sobre el enlace */
+  color: azure;
+  font-size: 11px;
+}
+
+.name-link-projects:hover {
+  text-decoration: none; 
+  color: #93B1A6;
+}
+
+/*
+
+flex flex-row justify-between items-center p-8 flex-wrap text-lg bg-tomato-2 text-mauve-12'
+*/
