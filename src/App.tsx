@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import './index.css';
 
-import { BrowserRouter as Router, Route, Routes, Link, Navigate } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, Link, Navigate } from "react-router-dom";
 
 import image from "./images/image.png"
 import a from "./images/a.png"
