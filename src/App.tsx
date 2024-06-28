@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import './index.css';
+import hv from './assets/hv.pdf';
 
 import { HashRouter as Router, Route, Routes, Link, Navigate } from "react-router-dom";
 
@@ -43,7 +44,7 @@ function Home () {
             />
         </div> 
         <div className='buttons-home'>
-          <a href='/hv.pdf' download="hv.pdf" >
+          <a href={hv} download="hv.pdf" >
             <button className='btn'>Descargar CV</button>
           </a>
           <a href="mailto:fernando.caamachoo@gmail.com?Subject=Interesado en tus servicios de desarrollo web">
