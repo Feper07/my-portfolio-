@@ -5,6 +5,7 @@ import hv from './assets/hv.pdf';
 
 import { HashRouter as Router, Route, Routes, Link, Navigate } from "react-router-dom";
 
+
 import image from "./images/image.png"
 import a from "./images/a.png"
 import b from "./images/b.png"
@@ -92,57 +93,55 @@ function Skills () {
         <div className='img-skills-container-main'>
           <div className='img-primera-parte-skills'>
             <div className='img-1-skills'>
-              <OverlayTrigger overlay={<Tooltip className='tooltip-html'>HTML</Tooltip>}>
+                  <p className='tooltip-html'>HTML</p>
                   <button className='button-tooltip'>
                   <img className='image-skills-a' src={a} alt='foto de perfil'/>
                   </button>
-              </OverlayTrigger>
             </div>
             <div className='img-1-skills'>
-              <OverlayTrigger overlay={<Tooltip className='tooltip-html'>CSS</Tooltip>}>
+                  <p className='tooltip-html'>CSS</p>
                   <button className='button-tooltip'>
                   <img className='image-skills-b' src={b} alt='foto de perfil'/>
                   </button>
-              </OverlayTrigger>
             </div>
             <div className='img-1-skills'>
-              <OverlayTrigger overlay={<Tooltip className='tooltip-html'>JavaScript</Tooltip>}>
+                  <p className='tooltip-html'>JavaScript</p>
                   <button className='button-tooltip'>
                   <img className='image-skills-c' src={c} alt='foto de perfil'/>
                   </button>
-              </OverlayTrigger>
             </div>
             <div className='img-1-skills'>
-              <OverlayTrigger overlay={<Tooltip className='tooltip-html'>React</Tooltip>}>
+              <p className='tooltip-html'>React</p>
                 <button className='button-tooltip'>
                 <img className='image-skills-d' src={d} alt='foto de perfil'/>
                 </button>
-              </OverlayTrigger>
             </div>
           </div>
           <div className='img-segunda-parte-skills'>
             <div className='img-2-skills'>
-              <OverlayTrigger overlay={<Tooltip className='tooltip-html'>Tailwind</Tooltip>}>
+                 <p className='tooltip-html'>Tailwind</p>
                 <button className='button-tooltip'>
                 <img className='image-skills-e' src={e} alt='foto de perfil'/>
                 </button>
-              </OverlayTrigger>
             </div>
             <div className='img-2-skills'>
-              <OverlayTrigger overlay={<Tooltip className='tooltip-html'>Typescript</Tooltip>}>
+                <p className='tooltip-html'>TypeScript</p>
                 <button className='button-tooltip'>
                 <img className='image-skills-f' src={f} alt='foto de perfil'/>
                 </button>
-              </OverlayTrigger>
             </div>
             <div className='img-2-skills'>
-              <OverlayTrigger overlay={<Tooltip className='tooltip-html'>Bootstrap</Tooltip>}>
+                <p className='tooltip-html'>Bootstrap</p>
                 <button className='button-tooltip'>
                 <img className='image-skills-g' src={g} alt='foto de perfil'/>
                 </button>
-              </OverlayTrigger>
             </div>
-            <div className='img-2-skills'><img className='image-skills-h' src={h} alt='foto de perfil'/></div>
+            <div className='img-2-skills'>
+              <p className='tooltip-html'>Git</p>
+              <button className='button-tooltip'>
+              <img className='image-skills-h' src={h} alt='foto de perfil'/>
+              </button>
+            </div>
           </div>
         </div>
         <div className='text-skills-container'>

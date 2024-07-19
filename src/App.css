@@ -139,7 +139,7 @@
 
 .routes-container{
   background-color: var(--bronze-1);
-  height: 240vh; /*Review*/
+  /*height: 240vh; - Review*/
 }
 
 /*componente funcional Home*/
@@ -150,6 +150,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   padding-top: 5rem;
+  padding-bottom: 2rem;
   background-color: var(--bronze-1);
   /*height: 100vh;*/
 }
@@ -274,16 +275,15 @@
   background-color: var(--tomato-10);
   cursor: pointer;
   border: none;
-  color: var(--tomato-12);
+  color:  #FFF8F7;
   border: 1.5px solid transparent; /* El borde no será visible inicialmente */
   transition: border-color 0.3s ease; /* Añade una transición suave al cambio de color del borde */
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 
 .btn-diferente:hover{
   border-color:  var(--mauve-12);
 }
-
 
 .icon{
   font-size: 32px;
@@ -314,7 +314,7 @@
   flex-wrap: wrap;
   padding-top: 4rem;
   background-color: var(--bronze-1);
-  height: 200vh;
+  /*height: 200vh; Review*/
   width: 60%;
   margin: auto;
 }
@@ -355,6 +355,7 @@
   align-items: center;
   flex-wrap: wrap;
   padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /*componente funcional Skills*/
@@ -365,8 +366,9 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 240vh;
+  /*min-height: 240vh; Review*/
   min-width: 100%;
+  padding-bottom: 2.5rem;
 }
 
 .title-skills-all{
@@ -391,8 +393,9 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  height: 100vh;
+  /*height: 100vh; Review */
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .img-skills-container-main{
@@ -414,7 +417,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding-top: 2.5rem;
+  padding-top: 0.5rem;
 }
 
 /* Color Tooltip*/
@@ -428,9 +431,13 @@
   color: var(--mauve-12);
   padding: 0.6rem;
   border-radius: 0.3rem;
-  font-weight: bold;
   fill: var(--mauve-12) ;
-  background-color: var(--bronze-1);
+  background-color: var(--tomato-2);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
 }
 
 /*Contenedor img*/
@@ -453,26 +460,6 @@
 
 .image-skills-a:hover{
   transform: rotate(5deg);
-}
-
-/*"after" text para cada img*/
-/*Texto sobre img. Primero en el div y tmbn en la img*/
-.image-skills-a::after {
-  content: "Nombre de la imagen"; /* Aquí pones el nombre que quieras mostrar */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(173, 23, 23);
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 0.5rem;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-}
-
-.img-1-skills:hover .image-skills-a::after {
-  opacity: 1;
 }
 
 .image-skills-b{
@@ -513,16 +500,14 @@
   transform: rotate(5deg);
 }
 
-
-
 .img-segunda-parte-skills{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding-top: 3rem;
-  padding-bottom: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .image-skills:hover{
@@ -619,7 +604,8 @@
   align-items: center;
   /*flex-wrap: wrap;*/
   padding-top: 2rem;
-  min-height: 240vh;
+  padding-bottom: 2rem;
+  /*min-height: 240vh; Review*/
   min-width: 100%;
 }
 
