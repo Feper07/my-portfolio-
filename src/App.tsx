@@ -180,7 +180,7 @@ function Projects () {
           </div>
           <div className='links-container-proyect'>
             <a className='name-link-projects' href='https://github.com/Feper07/clone-todoist-typescript' target="_blank" rel="noopener noreferrer"><button className='btn'> Repositorio</button></a>
-            <a className='name-link-projects' href='https://www.linkedin.com/in/fernando-camacho-b26368311/' target="_blank" rel="noopener noreferrer"><button className='btn-diferente'>Ver Demo</button></a>
+            <a className='name-link-projects' href='https://feper07.github.io/clone-todoist-typescript/' target="_blank" rel="noopener noreferrer"><button className='btn-diferente'>Ver Demo</button></a>
           </div>
         </div>
         <div className='container-dos-projects'>
