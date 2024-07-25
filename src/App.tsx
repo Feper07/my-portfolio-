@@ -19,8 +19,8 @@ import gobit from "./images/gobit.gif"
 import todoistd from "./images/todoistd.gif"
 
 
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
+/*import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';*/
 
 import { FaBars, FaLinkedinIn } from "react-icons/fa";
 
